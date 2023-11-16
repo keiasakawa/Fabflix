@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Valve className="org.apache.catalina.valves.rewrite.RewriteValve" />
+    <!-- Defines a Data Source Connecting to localhost moviedbexample-->
+    <Resource name="jdbc/moviedb"
+              auth="Container"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              type="javax.sql.DataSource"
+              username="root"
+              password="1DrSm8939Ktf"
+              url="jdbc:mysql://localhost:3306/moviedb?allowPublicKeyRetrieval=true&amp;autoReconnect=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+
+    <Resource name="jdbc/moviedbwrite"
+              auth="Container"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              maxTotal="100" maxIdle="30" maxWaitMillis="10000"
+              type="javax.sql.DataSource"
+              username="root"
+              password="password"
+              url="jdbc:mysql://54.245.78.118:3306/moviedb?allowPublicKeyRetrieval=true&amp;autoReconnect=true&amp;useSSL=false&amp;cachePrepStmts=true"/>
+</Context>
